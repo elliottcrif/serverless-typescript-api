@@ -26,15 +26,6 @@ resource "aws_lambda_function" "api_lambda" {
   source_code_hash = filebase64sha256("../../function.zip")
   timeout = 30
   runtime = "nodejs12.x"
-
-  environment {
-    variables = {
-      ESRI_USERNAME = var.ESRI_USERNAME
-      ESRI_PASSWORD = var.ESRI_PASSWORD
-      ESRI_FEATURE_SERVICE_URL = var.ESRI_FEATURE_SERVICE_URL,
-      SHAPEFILE_BUCKET_NAME = aws_s3_bucket.bucket.id
-    }
-  }
 }
 
 # See also the following AWS managed policy: AWSLambdaBasicExecutionRole
@@ -55,25 +46,6 @@ resource "aws_iam_policy" "basic_execution_role" {
       ],
       "Resource": "arn:aws:logs:*:*:*",
       "Effect": "Allow"
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "s3:GetObject",
-        "s3:GetObjectAcl",
-        "s3:GetObjectVersionAcl",
-        "s3:PutObject",
-        "s3:PutObjectAcl",
-        "s3:PutObjectVersionAcl",
-        "s3:PutObjectTagging",
-        "s3:PutObjectVersionTagging",
-        "s3:DeleteObject",
-        "s3:DeleteObjectVersion",
-        "s3:DeleteObjectTagging",
-        "s3:ListObjects",
-        "s3:RestoreObject"
-      ],
-      "Resource": ["${aws_s3_bucket.bucket.arn}", "${aws_s3_bucket.bucket.arn}/*"]
     }
   ]
 }

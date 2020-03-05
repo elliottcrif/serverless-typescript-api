@@ -1,7 +1,7 @@
 terraform {
     backend "s3" {
-        bucket = "terraform-state-ecobot"
-        key = "ecobot-feature-service"
+        bucket = "terraform-state-elliottcrifasi"
+        key = "superhero-api"
         region = "us-east-2"
    }
 }
