@@ -1,6 +1,6 @@
 resource "aws_api_gateway_rest_api" "api" {
-  name        = "EcobotFeatureServiceAPI"
-  description = "This is API exposes a RESTful interface to interact with an ArcGIS Feature Service"
+  name        = "SuperheroRestAPI"
+  description = "This is API exposes a RESTful interface to interact with a Superhero DB"
 }
 resource "aws_api_gateway_resource" "superheroes" {
   path_part   = "superheroes"
