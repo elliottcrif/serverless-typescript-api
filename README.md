@@ -1,6 +1,6 @@
 # Serverless Typescript API
 
-This API exposes an interface to an
+This repository contains a simple example of how to use Terraform, Typescript, and Express to create a server-less API hosted on AWS
 
 # How to run the app
 
