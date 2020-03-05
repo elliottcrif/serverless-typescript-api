@@ -1,7 +1,7 @@
 export interface IDatabaseService<T> {
-    getOne(itemId: String): Promise<T>;
+    getOne(itemId: string): Promise<T>;
     getAll(): Promise<T[]>;
     updateOne(item: T): Promise<T>;
     addOne(item: T): Promise<T>;
-    deleteOne(itemId: String): Promise<Boolean>;
+    deleteOne(itemId: string): Promise<Boolean>;
 }

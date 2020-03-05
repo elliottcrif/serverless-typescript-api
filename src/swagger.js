@@ -16,30 +16,15 @@ export default {
     'application/json'
   ],
   paths: {
-    '/{userId}/portfolio': {
+    '/superheroes': {
       get: {
         tags: [
-          'Portfolio'
+          'Superhero'
         ],
-        summary: 'Get all portfolio items for a user',
-        parameters: [
-          {
-            name: 'userId',
-            in: 'path',
-            description: 'the userId of the user to get portfolio items for',
-            required: true,
-            schema: {
-              type: 'string'
-            },
-            style: 'simple'
-          }
-        ],
+        summary: 'Get all superheros',
         responses: {
           200: {
             description: 'OK',
-            schema: {
-              $ref: '#/definitions/portfolioItem'
-            }
           },
           401: {
             description: 'NOT AUTHORIZED',
@@ -58,13 +43,6 @@ export default {
     }
   },
   definitions: {
-    portfolioItem: {
-      properties: {
-        title: {
-          type: 'string'
-        }
-      }
-    },
     error: {
       properties: {
         message: {
