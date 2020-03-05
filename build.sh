@@ -7,4 +7,4 @@ npm run build
 
 cp -r node_modules build/node_modules
 
-zip -rqFS function.zip build 
+zip -rqjFS function.zip build

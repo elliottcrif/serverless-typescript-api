@@ -19,7 +19,7 @@ EOF
 }
 
 resource "aws_lambda_function" "api_lambda" {
-  filename      = "../../build/function.zip"
+  filename      = "../../function.zip"
   function_name = "ecobot-feature-service"
   role          = aws_iam_role.iam_for_lambda.arn
   handler       = "app.handler"
@@ -53,6 +53,6 @@ EOF
 }
 
 resource "aws_iam_role_policy_attachment" "lambda_logs" {
-  role = "${aws_iam_role.iam_for_lambda.name}"
-  policy_arn = "${aws_iam_policy.basic_execution_role.arn}"
+  role = aws_iam_role.iam_for_lambda.name
+  policy_arn = aws_iam_policy.basic_execution_role.arn
 }
