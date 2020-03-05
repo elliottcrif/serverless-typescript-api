@@ -2,6 +2,7 @@ resource "aws_api_gateway_rest_api" "api" {
   name        = "SuperheroRestAPI"
   description = "This is API exposes a RESTful interface to interact with a Superhero DB"
 }
+
 resource "aws_api_gateway_resource" "superheroes" {
   path_part   = "superheroes"
   parent_id   = aws_api_gateway_rest_api.api.root_resource_id
