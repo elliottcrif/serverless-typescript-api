@@ -1,0 +1,39 @@
+{
+    "9a676384-efe5-4067-90ae-74668f7aac58" : {
+        "id": "9a676384-efe5-4067-90ae-74668f7aac58",
+        "name":"Batman", 
+        "publisher":"DC Comics", 
+        "alterEgo":"Bruce Wayne",
+        "powers": [
+            "intimidation",
+            "indomitable will",
+            "genius-level intellect",
+            "peak conditioning",
+            "martial arts"
+        ],
+        "images": ["https://upload.wikimedia.org/wikipedia/en/1/19/Batman_%28circa_2016%29.png"]
+    },
+    "54b9192d-242e-405f-9606-38dd0c09202d" : {
+        "id": "54b9192d-242e-405f-9606-38dd0c09202d",
+        "name":"Superman", 
+        "publisher":"DC Comics", 
+        "alterEgo": "Kal-el",
+        "powers": [
+            "super-strength", 
+            "laser-vision", 
+            "xray-vision",
+            "enhanced-vision",
+            "flight", 
+            "high-invulnerability"
+        ],
+        "images": ["https://static2.srcdn.com/wordpress/wp-content/uploads/2020/01/Death-of-Superman.jpg?q=50&fit=crop&w=960&h=500&dpr=1.5"]
+    },
+    "7721a0e8-5a8d-4a1d-bc6f-916e17a97d5d": {
+        "id": "7721a0e8-5a8d-4a1d-bc6f-916e17a97d5d",
+        "name":"Flash", 
+        "publisher":"DC Comics", 
+        "alterEgo":"Jay Gerrick",
+        "powers": ["super-speed", "superhuman-stamina", "superhuman-reflexes", "superhuman-agility", "intangibility", "speed reading"],
+        "images": ["https://upload.wikimedia.org/wikipedia/en/e/e2/The_Flash_Vol_5_60.png"]
+    }
+}
