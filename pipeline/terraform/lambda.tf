@@ -20,7 +20,7 @@ EOF
 
 resource "aws_lambda_function" "api_lambda" {
   filename      = "../../build/function.zip"
-  function_name = "ecobot-feature-service"
+  function_name = "superhero-api-lambda"
   role          = aws_iam_role.iam_for_lambda.arn
   handler       = "app.handler"
   source_code_hash = filebase64sha256("../../build/function.zip")
